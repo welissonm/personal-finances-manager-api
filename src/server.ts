@@ -1,4 +1,5 @@
 import express from 'express';
+import  '@controllers/login.controller';
 const app = express();
 
 app.get('/', (request, response) => {
