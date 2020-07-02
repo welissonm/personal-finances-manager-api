@@ -1,8 +1,8 @@
 {
-  "name": "minhas_financias",
+  "name": "personal-finances-manager-api",
   "version": "1.0.0",
-  "description": "api para gerenciar minhas financias",
-  "license": "MIT",
+  "description": "an api to manage my personal finances",
+  "license": "BSD 2",
   "main": "server.js",
   "scripts": {
     "build": "babel src --extensions \"*.js,.ts\" --out-dir dist --copy-files --no-copy-ignored",
