@@ -6,7 +6,7 @@
     "allowJs": true,                       
     "outDir": "./dist",                        
     "rootDir": "./src",                       
-    "removeComments": true,                
+    "removeComments": true,   
     "strict": true,                           
     "typeRoots": [
       "./node_modules/@types",

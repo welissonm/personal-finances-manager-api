@@ -1,10 +1,16 @@
-export default class User {
-    name: string;
+import { Column } from 'typeorm';
+import { BaseEntityImpl } from './base-entity';
 
-    email: string;
+export default class User extends BaseEntityImpl {
+  @Column('varchar', { length: 150, unique: false, nullable: false })
+  name: string;
 
-    constructor() {
-      this.name = '';
-      this.email = '';
-    }
+  @Column('varchar', { length: 150, unique: true, nullable: false })
+  email: string;
+
+  constructor() {
+    super(0, new Date(), undefined);
+    this.name = '';
+    this.email = '';
+  }
 }
