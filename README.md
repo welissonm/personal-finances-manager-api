@@ -1,41 +1,73 @@
-# Personal Finances Manager API
+<p align="center">
+  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
+</p>
 
-## 1) Functional Requirements
-  ### Authentication
-  - To do Login by e-mail and password with e-mail check;
-  - Password redefinition by password old, notification of the change by e-mail and token session expiration;
-  - Password redefinition  by e-mail;
-  - Hash token authentication.
-  ### Features
-  - Create, update, exclude and list non-basic categories;
-  - Create, update, exclude and list accounts;
-  - Create, update, exclude and list fixed or non-fixed financial expenditure;
-  - Create, update, and exclude and list fixed and non-fixed finances resources of accounts;
-  - Create, update, and delete and list non-fixed payment methods;
-  - Fixed or non-fixed financial expenditure should be linked to some of the categories;
-  - Fixed or non-fixed financial expenditure should be linked to some of the payment methods;
-  - The fixed payment methods should be linked to some of fixed accounts;
-  - The financial expenditure are accounting entries of an account;
-  - Add and diseable accounting entries of an account;
-  - The fixed payment methods: Credit card, In cash, Bank debit;
-  - The fixed accounts: Bank account, Credit card, Cash;
-  - Transfers between accounts should be allowed.
+[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
+[circleci-url]: https://circleci.com/gh/nestjs/nest
 
-### 2) Non-Functional Requirements
-  - API REST;
-  - Use of postgresql relational database for entities;
-  - Use non-relational database like mongo ou firebase for the logs;
-  - Push Notification manager;
-  - Use of the most current NodeJs for API development;
-  - Use non-relational database Redis for cache of constants and refresh tokens.
-  - Use docker's containers.
-  - The API's response around de 2 seconds;
-  - Success and error messages REST should be standardized;
-  - Using the TDD development method.
+  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
+    <p align="center">
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
+<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
+<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
+<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
+<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
+<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
+  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
+    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
+  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
+</p>
+  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
+  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-*By Welisson Moura*
+## Description
 
-License
-----
+[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-MIT
+## Installation
+
+```bash
+$ pnpm install
+```
+
+## Running the app
+
+```bash
+# development
+$ pnpm run start
+
+# watch mode
+$ pnpm run start:dev
+
+# production mode
+$ pnpm run start:prod
+```
+
+## Test
+
+```bash
+# unit tests
+$ pnpm run test
+
+# e2e tests
+$ pnpm run test:e2e
+
+# test coverage
+$ pnpm run test:cov
+```
+
+## Support
+
+Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+
+## Stay in touch
+
+- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
+- Website - [https://nestjs.com](https://nestjs.com/)
+- Twitter - [@nestframework](https://twitter.com/nestframework)
+
+## License
+
+Nest is [MIT licensed](LICENSE).
