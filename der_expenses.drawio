@@ -1,0 +1,94 @@
+<mxfile host="65bd71144e">
+    <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
+        <mxGraphModel dx="2021" dy="1989" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="WIyWlLk6GJQsqaUBKTNV-0"/>
+                <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0"/>
+                <mxCell id="13" style="edgeStyle=none;html=1;entryX=0.548;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="Xec_dI3AxyZPSjPY3MIW-13" target="9">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="Xec_dI3AxyZPSjPY3MIW-13" target="Xec_dI3AxyZPSjPY3MIW-2">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="Xec_dI3AxyZPSjPY3MIW-13" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+                    <mxGeometry x="-320" y="-110" width="620" height="620" as="geometry"/>
+                </mxCell>
+                <mxCell id="zNzkGlOS1Pj8zT7MWDbS-3" value="" style="group" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1" connectable="0">
+                    <mxGeometry x="-290" width="300" height="390" as="geometry"/>
+                </mxCell>
+                <mxCell id="zNzkGlOS1Pj8zT7MWDbS-1" value="expense creation" style="ellipse;whiteSpace=wrap;html=1;" parent="zNzkGlOS1Pj8zT7MWDbS-3" vertex="1">
+                    <mxGeometry x="85.71428571428572" width="128.57142857142858" height="104" as="geometry"/>
+                </mxCell>
+                <mxCell id="zNzkGlOS1Pj8zT7MWDbS-2" value="&lt;ul&gt;&lt;li&gt;the original amount;&lt;/li&gt;&lt;li&gt;the creation date;&lt;/li&gt;&lt;li&gt;the expiration date;&lt;br&gt;&lt;/li&gt;&lt;li&gt;the description;&lt;/li&gt;&lt;li&gt;if the expense is recurring;&lt;/li&gt;&lt;li&gt;if the expense is recurring, what is its recurrence?;&lt;/li&gt;&lt;li&gt;the expense category;&lt;br&gt;&lt;/li&gt;&lt;li&gt;the cash source;&lt;/li&gt;&lt;li&gt;the expense type&lt;/li&gt;&lt;ul&gt;&lt;li&gt;bills to pay;&lt;/li&gt;&lt;li&gt;service contracting&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;the external code to reference the expense&lt;/li&gt;&lt;/ul&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" parent="zNzkGlOS1Pj8zT7MWDbS-3" vertex="1">
+                    <mxGeometry y="116.99999999999999" width="300" height="273" as="geometry"/>
+                </mxCell>
+                <mxCell id="lVsxYJrHT0ziq54voVGJ-0" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Requisits&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;expense registration;&lt;/li&gt;&lt;li&gt;categorize an expense;&lt;br&gt;&lt;/li&gt;&lt;li&gt;inform whether the expense is recurring;&lt;br&gt;&lt;/li&gt;&lt;li&gt;define the recurrence if the expense is recurring;&lt;br&gt;&lt;/li&gt;&lt;li&gt;If an expense is recurring, it must be mandatory to define the time in which it occurs again: day of the month, weekly, bimonthly, semi-annual, annual, etc.&lt;/li&gt;&lt;li&gt;define the original amount&amp;nbsp;and the amount paid.&amp;nbsp;&lt;/li&gt;&lt;li&gt;it must relate the expense to the cash source of the funds;&lt;br&gt;&lt;/li&gt;&lt;li&gt;it&amp;nbsp;must relate the origin of the expense:&lt;/li&gt;&lt;ul&gt;&lt;li&gt;bills to pay;&lt;/li&gt;&lt;li&gt;service contracting&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;it status manage:&lt;/li&gt;&lt;ul&gt;&lt;li&gt;Paid;&lt;/li&gt;&lt;li&gt;Open;&lt;/li&gt;&lt;li&gt;Expired;&lt;/li&gt;&lt;li&gt;Canceled;&lt;/li&gt;&lt;li&gt;Reversed.&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;It save the expiration date and status manage from this date;&lt;br&gt;&lt;/li&gt;&lt;li&gt;It must&amp;nbsp;store a link to possible attachments;&lt;/li&gt;&lt;li&gt;It&amp;nbsp;must have specific actions for the following status changes:&lt;/li&gt;&lt;ul&gt;&lt;li&gt;Paid;&lt;/li&gt;&lt;li&gt;Canceled;&lt;/li&gt;&lt;li&gt;Reversed&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;When an expense has a status of Canceled or Paid, it cannot be changed;&lt;br&gt;&lt;/li&gt;&lt;li&gt;The API must make it possible to store links to attachments for each of the specific actions;&lt;/li&gt;&lt;li&gt;The API should allow you to list expenses by filtering the result by:&lt;/li&gt;&lt;ul&gt;&lt;li&gt;status;&lt;/li&gt;&lt;li&gt;the source of funds;&lt;/li&gt;&lt;li&gt;category;&lt;/li&gt;&lt;li&gt;dates;&lt;/li&gt;&lt;li&gt;recurrence type;&lt;/li&gt;&lt;li&gt;&lt;p style=&quot;margin: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-size-adjust: none; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-stretch: normal; line-height: normal; font-family: &amp;quot;Helvetica Neue&amp;quot;;&quot; class=&quot;p1&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;the record ID of the cash register from which the resource originated&lt;/font&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+                    <mxGeometry x="-770" y="-60" width="290" height="682" as="geometry"/>
+                </mxCell>
+                <mxCell id="Xec_dI3AxyZPSjPY3MIW-12" value="" style="group" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1" connectable="0">
+                    <mxGeometry x="450" y="-90" width="410" height="410" as="geometry"/>
+                </mxCell>
+                <mxCell id="Xec_dI3AxyZPSjPY3MIW-2" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="Xec_dI3AxyZPSjPY3MIW-12" vertex="1">
+                    <mxGeometry width="410" height="410" as="geometry"/>
+                </mxCell>
+                <mxCell id="Xec_dI3AxyZPSjPY3MIW-3" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Expense Categorization&lt;/h1&gt;&lt;p&gt;Expenses can be categorized by association between the expense and the category. An expense can be associated with more than one category.&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="Xec_dI3AxyZPSjPY3MIW-12" vertex="1">
+                    <mxGeometry x="20" y="20" width="280" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="Xec_dI3AxyZPSjPY3MIW-8" value="" style="group" parent="Xec_dI3AxyZPSjPY3MIW-12" vertex="1" connectable="0">
+                    <mxGeometry x="45" y="120" width="150" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="Xec_dI3AxyZPSjPY3MIW-5" value="&lt;ul&gt;&lt;li&gt;name&lt;/li&gt;&lt;/ul&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" parent="Xec_dI3AxyZPSjPY3MIW-8" vertex="1">
+                    <mxGeometry y="90" width="150" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="Xec_dI3AxyZPSjPY3MIW-4" value="category creation" style="ellipse;whiteSpace=wrap;html=1;" parent="Xec_dI3AxyZPSjPY3MIW-8" vertex="1">
+                    <mxGeometry x="15" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="Xec_dI3AxyZPSjPY3MIW-9" value="" style="group" parent="Xec_dI3AxyZPSjPY3MIW-12" vertex="1" connectable="0">
+                    <mxGeometry x="200" y="120" width="150" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="Xec_dI3AxyZPSjPY3MIW-10" value="&lt;ul&gt;&lt;li&gt;expense code&lt;/li&gt;&lt;li&gt;category code&lt;/li&gt;&lt;/ul&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" parent="Xec_dI3AxyZPSjPY3MIW-9" vertex="1">
+                    <mxGeometry y="90" width="150" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="Xec_dI3AxyZPSjPY3MIW-11" value="categorize an expense" style="ellipse;whiteSpace=wrap;html=1;" parent="Xec_dI3AxyZPSjPY3MIW-9" vertex="1">
+                    <mxGeometry x="15" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="Xec_dI3AxyZPSjPY3MIW-14" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Expense Registration&lt;/h1&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+                    <mxGeometry x="-300" y="-80" width="260" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="0" target="9">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="0" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+                    <mxGeometry x="-370" y="540" width="510" height="420" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="&lt;h1&gt;Payment of Expenses&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+                    <mxGeometry x="-300" y="560" width="260" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="" style="group" vertex="1" connectable="0" parent="WIyWlLk6GJQsqaUBKTNV-1">
+                    <mxGeometry x="-310" y="610" width="230" height="318" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="&lt;ul&gt;&lt;li&gt;the payment amount;&lt;/li&gt;&lt;li&gt;the payment date;&lt;/li&gt;&lt;li&gt;the cash source;&lt;/li&gt;&lt;li&gt;the external code to reference the expense;&lt;/li&gt;&lt;li&gt;the internal expense code.&amp;nbsp;&lt;/li&gt;&lt;/ul&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="5">
+                    <mxGeometry y="90" width="230" height="228" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Register payment of expenses" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="5">
+                    <mxGeometry x="55" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+                    <mxGeometry x="340" y="510" width="430" height="380" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="&lt;h1&gt;Expense File Attachment&lt;br&gt;&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+                    <mxGeometry x="360" y="540" width="320" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="" style="group" vertex="1" connectable="0" parent="WIyWlLk6GJQsqaUBKTNV-1">
+                    <mxGeometry x="430" y="585" width="250" height="285" as="geometry"/>
+                </mxCell>
+                <mxCell id="Xec_dI3AxyZPSjPY3MIW-15" value="attach the files" style="ellipse;whiteSpace=wrap;html=1;" parent="11" vertex="1">
+                    <mxGeometry x="60" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="Xec_dI3AxyZPSjPY3MIW-16" value="&lt;ul&gt;&lt;li style=&quot;text-align: left;&quot;&gt;upload files;&lt;/li&gt;&lt;li style=&quot;text-align: left;&quot;&gt;associate files links on expense register&lt;br&gt;&lt;/li&gt;&lt;li style=&quot;text-align: left;&quot;&gt;the files must be no more than 4mb in size&lt;br&gt;&lt;/li&gt;&lt;li style=&quot;text-align: left;&quot;&gt;the file access link must be a temporary link&lt;br&gt;&lt;/li&gt;&lt;li style=&quot;text-align: left;&quot;&gt;payment status&lt;/li&gt;&lt;/ul&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="11" vertex="1">
+                    <mxGeometry y="85" width="250" height="200" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

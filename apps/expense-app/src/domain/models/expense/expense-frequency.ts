@@ -1,0 +1,9 @@
+export enum ExpenseFrequency {
+  SINGLE = 'SINGLE',
+  DAILY = 'DAILY',
+  WEEKLY = 'WEEKLY',
+  MONTHLY = 'MONTHLY',
+  QUARTERLY = 'QUARTERLY',
+  SEMI_ANNUAL = 'SEMI_ANNUAL',
+  ANNUAL = 'ANNUAL'
+}

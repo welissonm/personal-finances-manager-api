@@ -1,0 +1,4 @@
+export enum ExpenseType {
+  BILLS_TO_PAY = 'BILLS_TO_PAY',
+  SERVICE_CONTRACTING = 'SERVICE_CONTRACTING'
+}

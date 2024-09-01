@@ -1,0 +1,6 @@
+export enum ExpenseActionType {
+  REGISTRATION = 'REGISTRATION',
+  PAYMENT = 'PAYMENT',
+  CANCELLATION = 'CANCELLATION',
+  REFUND = 'REFUND'
+}
