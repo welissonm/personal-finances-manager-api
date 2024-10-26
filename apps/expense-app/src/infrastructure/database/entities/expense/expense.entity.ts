@@ -1,22 +1,26 @@
 import {
-  Expense, ExpenseCategory, ExpenseDocument, ExpenseFrequency, ExpenseOccurrence, ExpenseStatus, ExpenseType
+  Expense, ExpenseFrequency, ExpenseStatus, ExpenseType
 } from "../../../../domain/models/expense";
 import { Entity } from "../entity.interface";
+import { ExpenseCategoryEntity } from "./expense-category.entity";
+import { ExpenseDocumentEntity } from "./expense-document.entity";
+import { ExpenseOccurrenceEntity } from "./expense-occurrence.entity";
 
 export class ExpenseEntity implements Expense, Entity {
   id: string | undefined;
   externalCode: string;
   originalAmount: bigint;
-  category: ExpenseCategory;
+  categoryId: string;
+  category: ExpenseCategoryEntity;
   type: ExpenseType;
   status: ExpenseStatus;
   dueDate: Date;
   isRecurring: boolean;
   frequency: ExpenseFrequency;
-  occurrences: ExpenseOccurrence[];
+  occurrences: ExpenseOccurrenceEntity[];
   description?: string;
   nextDueDate?: Date;
-  documents?: ExpenseDocument[];
+  documents?: ExpenseDocumentEntity[];
   deleted: boolean;
   createdAt: Date;
   updatedAt?: Date;

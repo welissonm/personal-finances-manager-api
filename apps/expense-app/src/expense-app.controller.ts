@@ -9,4 +9,5 @@ export class ExpenseAppController {
   getHello(): string {
     return this.expenseAppService.getHello();
   }
+
 }

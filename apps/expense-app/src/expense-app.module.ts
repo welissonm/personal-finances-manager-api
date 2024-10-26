@@ -5,13 +5,13 @@ import configurationFactory from './configs';
 
 import { ExpenseAppController } from './expense-app.controller';
 import { ExpenseAppService } from './expense-app.service';
-import { ModelsModule } from './domain/models/models.module';
-
+import { ExpenseModule } from './entrypoint/expense/expense.module';
 
 @Module({
   imports: [ConfigModule.forRoot({
+    isGlobal: true,
     load: [configurationFactory],
-  }),, ModelsModule],
+  }), ExpenseModule],
   controllers: [ExpenseAppController],
   providers: [ExpenseAppService],
 })

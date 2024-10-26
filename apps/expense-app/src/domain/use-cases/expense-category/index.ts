@@ -1,0 +1,1 @@
+export { CreateExpenseCategoryUseCase } from './create-expense-category.case';

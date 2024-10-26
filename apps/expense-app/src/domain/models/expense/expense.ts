@@ -9,6 +9,7 @@ export interface Expense {
   id: string | undefined;
   externalCode: string;
   originalAmount: bigint;
+  categoryId: string;
   category: ExpenseCategory;
   type: ExpenseType;
   status: ExpenseStatus;

@@ -4,6 +4,7 @@ import { ExpenseStatus } from "./expense-status";
 
 export interface ExpenseOccurrence {
   id: string | undefined;
+  expenseId: string;
   expense: Expense;
   status: ExpenseStatus;
   paidAmout: bigint;

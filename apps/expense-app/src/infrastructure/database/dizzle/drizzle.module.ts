@@ -2,9 +2,9 @@ import { Module } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 
 import { Pool } from 'pg';
-import { drizzle, NodePgDatabase } from 'drizzle-orm/node-postgres';
+import { drizzle } from 'drizzle-orm/node-postgres';
 
-import * as schema from './schema';
+import * as schema from './schemas';
 
 export const DRIZZLE_PROVIDER = Symbol('DRIZZLE');
 
@@ -19,7 +19,7 @@ export const DRIZZLE_PROVIDER = Symbol('DRIZZLE');
             connectionString: databaseUrl,
             ssl: process.env.DB_SSL_ENABLED?.toLocaleLowerCase() === 'true',
           })
-          return drizzle(pool, { schema }) as NodePgDatabase<typeof schema>
+          return drizzle(pool, { schema })
       },
     }
   ],
