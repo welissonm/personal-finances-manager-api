@@ -24,7 +24,7 @@ export class CreateExpenseOccurenceUseCase implements UseCase<CreateExpenseOccur
       status: ExpenseStatus.OPEN,
     })
 
-    return expenseOccurence;
+    return await this.expenseOccurrenceRepository.save(expenseOccurence)
   }
 
 }

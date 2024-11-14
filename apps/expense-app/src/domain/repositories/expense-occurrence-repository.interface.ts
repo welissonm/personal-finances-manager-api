@@ -5,4 +5,5 @@ import { CreateExpenseOccurenceType } from "./create-expense-occurrence.type";
 export interface ExpenseOccurrenceRepository {
   findById(idCriterial: IdCriterial): Promise<ExpenseOccurrence>
   create(expenseOccurrence: CreateExpenseOccurenceType): Promise<ExpenseOccurrence>
+  save(expenseOccurrence: ExpenseOccurrence): Promise<ExpenseOccurrence>
 }
