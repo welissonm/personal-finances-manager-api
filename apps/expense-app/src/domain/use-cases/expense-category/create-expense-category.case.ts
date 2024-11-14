@@ -13,7 +13,7 @@ export class CreateExpenseCategoryUseCase implements UseCase<ExpenseCategory, Ex
 
   async execute(expenseCategoy: ExpenseCategory): Promise<ExpenseCategory> {
     const alreadyExist = await this.service.exists({
-      name: expenseCategoy.name
+      name: expenseCategoy.name.toUpperCase()
     });
     if(alreadyExist){
       throw new ConflictException(`Já existe uma categoria com o nome de ${expenseCategoy.name}`);
