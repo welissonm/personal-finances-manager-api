@@ -1,16 +1,21 @@
 import { Mock, mock } from 'ts-jest-mocker';
 
-import { ExpenseRepository } from "apps/expense-app/src/domain/repositories/expense-repository.interface";
+import { ExpenseRepository } from "../../../../domain/repositories/expense-repository.interface";
 import { CreateExpenseOccurenceUseCase } from '../../../../domain/use-cases/expense-occurrence/create-expense-occurrence.case';
 import { ExpenseOccurrenceRepository } from '../../../../domain/repositories/expense-occurrence-repository.interface';
-import { Expense, ExpenseOccurrence, ExpenseStatus } from '../../../../domain/models/expense';
+import { Expense, ExpenseFrequency, ExpenseOccurrence, ExpenseStatus, ExpenseType } from '../../../../domain/models/expense';
 import { CreateExpenseOccurrenceUseCaseInput } from '../../../../domain/use-cases/expense-occurrence/expense-occurrence-use-case.type';
+import { randomUUID } from 'node:crypto';
+
+jest.mock("../../../../domain/repositories/expense-repository.interface")
+jest.mock("../../../../domain/repositories/expense-occurrence-repository.interface")
 
 describe('Test create expense occurence use-case', () => {
   let expenseRepository: Mock<ExpenseRepository>;
   let expenseOccurrenceRepository: Mock<ExpenseOccurrenceRepository>
 
   beforeEach(() => {
+    jest.clearAllMocks()
     expenseRepository = mock<ExpenseRepository>();
     expenseOccurrenceRepository = mock<ExpenseOccurrenceRepository>();
   });
@@ -22,8 +27,25 @@ describe('Test create expense occurence use-case', () => {
   });
 
   test('should successfully create an expense occurrence', async () => {
+    expect.assertions(5);
   
-    const expense: Expense = mock<Expense>()
+    const expense: Expense = {
+      id: '1',
+      externalCode: randomUUID(),
+      originalAmount: 100n,
+      categoryId: '1',
+      category: undefined,
+      type: ExpenseType.BILLS_TO_PAY,
+      status: ExpenseStatus.OPEN,
+      createdAt: new Date(),
+      dueDate: new Date(new Date().getTime() + 30*24*60*60*1000),
+      isRecurring: true,
+      frequency: ExpenseFrequency.MONTHLY,
+      occurrences: [],
+      description: 'expense test',
+      documents: []
+    }
+    
     const expenseOccurrenceStub: ExpenseOccurrence = {
       id: undefined, 
       expenseId: '1',
@@ -34,7 +56,7 @@ describe('Test create expense occurence use-case', () => {
     }
     expenseRepository.findById.mockReturnValue(Promise.resolve(expense));
     expenseOccurrenceRepository.create.mockReturnValue(Promise.resolve(expenseOccurrenceStub));
-    expenseOccurrenceRepository.save.mockReturnValue(Promise.resolve({...expenseOccurrenceStub, id: '1'}))
+    expenseOccurrenceRepository.save.mockReturnValue(Promise.resolve({...expenseOccurrenceStub, id: '1' }))
 
     const useCaseInput: CreateExpenseOccurrenceUseCaseInput  =  {
       expenseId: expenseOccurrenceStub.expenseId,
