@@ -1,5 +1,6 @@
 import { NotFoundException } from "../../exceptions";
-import { ExpenseOccurrence, ExpenseStatus } from "../../models/expense";
+import { StateViolationException } from "../../exceptions/state-violation.exception";
+import { Expense, ExpenseOccurrence, ExpenseStatus } from "../../models/expense";
 import { ExpenseOccurrenceRepository } from "../../repositories/expense-occurrence-repository.interface";
 import { ExpenseRepository } from "../../repositories/expense-repository.interface";
 import { UseCase } from "../interfaces/use-case.interface";
@@ -18,6 +19,8 @@ export class CreateExpenseOccurenceUseCase implements UseCase<CreateExpenseOccur
       throw new NotFoundException(`expense with id ${input.expenseId} not found`);
     }
 
+    await this.verifyExpenseFrequence(expense)
+
     const expenseOccurence = await this.expenseOccurrenceRepository.create({
       expenseId: input.expenseId,
       dueDate: input.dueDate,
@@ -25,6 +28,12 @@ export class CreateExpenseOccurenceUseCase implements UseCase<CreateExpenseOccur
     })
 
     return await this.expenseOccurrenceRepository.save(expenseOccurence)
+  }
+
+  async verifyExpenseFrequence(expense: Expense) {
+    if(!expense.isRecurring && (await this.expenseRepository.countOccurrences({ id: expense.id })) >= 1){
+      throw new StateViolationException('frequency', 'the frequency of the expense does not allow for recurrence')
+    }
   }
 
 }
